@@ -500,9 +500,9 @@ body.dark-mode .contactLink {
     border-color: #555555;
 }
 @media screen and (max-width: 768px) {
-  .profile img {
-    object-position: contain;
-    object-position: center-top;
+  .devPic img {
+    object-fit: cover;
+    object-position: center 0%;
   }
 }
  
