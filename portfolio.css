@@ -1,0 +1,504 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7ff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Main Layout  */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar  */
+.sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    background-color: #172554;
+    color: white;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #bfdbfe;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 14px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #1e3a8a;
+    color: #bfdbfe;
+}
+
+/*  Main Content  */
+.main {
+    flex: 1;
+    min-width: 0;
+    padding: 40px;
+}
+
+/*  Home Section  */
+.infoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1050px;
+    min-height: 420px;
+
+    margin: 0 auto 30px;
+    padding: 40px;
+
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.devInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.hello {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.name {
+    font-size: 40px;
+    line-height: 1.2;
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+.about {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.moreabout {
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border: 2px solid #1d4ed8;
+    border-radius: 8px;
+
+    background-color: #1d4ed8;
+    color: white;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+.btn-outline {
+    background-color: white;
+    color: #1d4ed8;
+}
+
+.btn-outline:hover {
+    background-color: #eff6ff;
+    color: #1e40af;
+}
+
+/*  Profile Picture  */
+.devPic {
+    flex-shrink: 0;
+}
+
+.devPic img {
+    display: block;
+    width: 260px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    border: 4px solid #dbeafe;
+}
+
+/* About Section */
+.aboutSection {
+    width: 100%;
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 35px 40px;
+
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.aboutSection h2,
+.contentCard h2 {
+    font-size: 28px;
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.aboutSection p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.aboutSection p:last-child {
+    margin-bottom: 0;
+}
+
+/* General Content Cards */
+.contentCard {
+    width: 100%;
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 35px 40px;
+
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.sectionIntro {
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/*Skills Section  */
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    padding: 10px 16px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*  Projects Section */
+.projectContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 24px;
+    background-color: #f8faff;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(29, 78, 216, 0.12);
+}
+
+.projectCard h3 {
+    color: #1d4ed8;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.projectCard p {
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.projectCard .tech {
+    color: #475569;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* ===== Contact Section ===== */
+.contactLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contactLink {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+
+    background-color: #eff6ff;
+    color: #1d4ed8;
+
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contactLink:hover {
+    background-color: #dbeafe;
+}
+
+/* ===== Footer ===== */
+.footer {
+    max-width: 1050px;
+    margin: 35px auto 0;
+    padding: 20px 10px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ===== Tablet and Mobile ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 12px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+    }
+
+    .sidebar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 16px;
+    }
+
+    .infoContainer {
+        flex-direction: column-reverse;
+        text-align: center;
+        min-height: auto;
+        padding: 28px 20px;
+        gap: 24px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .hello {
+        font-size: 21px;
+    }
+
+    .about {
+        font-size: 16px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .devPic img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .aboutSection,
+    .contentCard {
+        padding: 25px 20px;
+    }
+
+    .aboutSection h2,
+    .contentCard h2 {
+        font-size: 25px;
+    }
+
+    .projectContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 400px) {
+    .main {
+        padding: 10px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .devPic img {
+        width: 190px;
+        height: 240px;
+    }
+
+    .aboutSection,
+    .contentCard {
+        padding: 20px 15px;
+    }
+
+
+
+    .sidebar a {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212 ;
+    color: white ;
+}
+
+body.dark-mode .container,
+body.dark-mode .main,
+body.dark-mode .infoContainer {
+    background-color: #121212 ;
+    color: white ;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1e1e1e ;
+}
+
+body.dark-mode .aboutSection,
+body.dark-mode .contentCard,
+body.dark-mode .projectCard {
+    background-color: #222222 ;
+    color: white ;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a {
+    color: white ;
+}
+
+body.dark-mode .skill {
+    background-color: #333333 ;
+    color: white ;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #333333 ;
+    color: white ;
+}
+
+
+body:not(.dark-mode) .btn {
+    background-color: #1d4ed8;
+    color: white;
+    border-color: #1d4ed8;
+}
+
+body:not(.dark-mode) .btn-outline {
+    background-color: white;
+    color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+
+body.dark-mode .btn {
+    background-color: #3b82f6;
+    color: white ;
+    border-color: #3b82f6;
+}
+
+body.dark-mode .btn-outline {
+    background-color: transparent;
+    color: white ;
+    border-color: white;
+}
+
+
+body:not(.dark-mode) .contactLink {
+    background-color: #eff6ff;
+    color: #1d4ed8 ;
+    border-color: #bfdbfe;
+}
+
+
+body.dark-mode .contactLink {
+    background-color: #333333;
+    color: white ;
+    border-color: #555555;
+}
+ 
+  
+   
